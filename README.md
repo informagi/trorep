@@ -4,6 +4,18 @@ Specifically:
 - A reproduction of ["Query-specific Document and Entity Representations" (QDER)](https://github.com/shubham526/SIGIR2025-QDER) (SIGIR '25).
 - An analysis of ["Document Re-Ranking Using Entity-based Query Understanding" (DREQ)](https://github.com/shubham526/ECIR2024-DREQ) (ECIR '24).
 
+> [!WARNING]
+> This reproduction analyzes the [QDER implementation](https://github.com/shubham526/SIGIR2025-QDER) at commit [`[ab2cd49153b2abdebcdfb7df5b77b7850f52a190]`](https://github.com/shubham526/SIGIR2025-QDER/tree/ab2cd49153b2abdebcdfb7df5b77b7850f52a190).
+>
+> Although the original repository has been updated since our reproduction/analysis, the **entity filtering and relevance leakage issues** identified in our findings remain present in the current codebase.
+>
+> Note that several scripts have been renamed in the new version:
+> | Our Analysis (Commit `ab2cd4`) | Current QDER Master (Commit `c6e4a0`) |
+> | :--- | :--- |
+> | `make_entity_qrels.py` | `make_entity_ranking_qrels.py` |
+> | `make_entity_data.py` | `make_entity_ranking_data.py` |
+> | `create_rerank_data.py` | `make_doc_ranking_data.py` |
+
 ## Abstract / Findings
 Query-Specific Document and Entity Representations (QDER) has
 shown state-of-the-art effectiveness on multiple information retrieval benchmarks. This work attempts to reproduce this promising approach. In an initial attempt, we were unable to find results
